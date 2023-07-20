@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Carousel from "../components/Carousel";
 import { dummyCarouselData } from "../assets/Constant";
 import { makeStyles } from "@mui/styles";
+import MovieCardSection from "../components/MovieCardSection";
 
 const useStyles = makeStyles(() => ({
   box: {
@@ -17,12 +18,15 @@ const HomePage = () => {
   return (
     <div>
       <NavBar />
+
       <div className={style.box}>
         <Carousel
           numberOfSlides={dummyCarouselData?.length}
           data={dummyCarouselData}
         />
       </div>
+
+      <MovieCardSection />
     </div>
   );
 };

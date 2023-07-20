@@ -2,6 +2,7 @@ import React from "react";
 import { CarouselProvider, Slider, Image, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import PropTypes from "prop-types";
+import { dummyImage } from "../assets/Constant";
 
 const Carousel = ({ numberOfSlides = 1, data }) => {
   return (
@@ -14,16 +15,14 @@ const Carousel = ({ numberOfSlides = 1, data }) => {
         marginLeft: "auto",
         marginRight: "auto",
         width: "95%",
+        height: "15rem",
       }}
     >
       <Slider>
         {data?.map((eachItem, index) => {
           return (
             <Slide key={index}>
-              <Image
-                src="https://picsum.photos/200"
-                style={{ height: "20%" }}
-              />
+              <Image src={dummyImage} style={{ height: "20%" }} />
             </Slide>
           );
         })}
@@ -36,8 +35,5 @@ export default Carousel;
 
 Carousel.propTypes = {
   numberOfSlides: PropTypes.number,
-};
-
-Carousel.propTypes = {
   data: PropTypes.arrayOf(PropTypes.string),
 };
