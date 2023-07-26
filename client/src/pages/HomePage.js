@@ -16,7 +16,7 @@ const HomePage = () => {
   const style = useStyles();
 
   return (
-    <div>
+    <>
       <NavBar />
 
       <div className={style.box}>
@@ -27,7 +27,8 @@ const HomePage = () => {
       </div>
 
       <MovieCardSection />
-    </div>
+      <MovieCardSection isDark={true} />
+    </>
   );
 };
 
