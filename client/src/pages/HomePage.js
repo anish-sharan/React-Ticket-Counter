@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 import MovieCardSection from "../components/MovieCardSection";
 import { TrendingSection } from "../components/TrendingSection";
 import Footer from "../components/Footer";
-import SignInModal from "../components/SignInModal";
+import SignInModal from "../components/SignIn/SignInModal";
 
 const useStyles = makeStyles(() => ({
   box: {

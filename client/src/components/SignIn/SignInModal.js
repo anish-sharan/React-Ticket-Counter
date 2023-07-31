@@ -9,11 +9,11 @@ import {
   StepLabel,
   Typography,
 } from "@mui/material";
-import Colors from "../assets/Colors";
+import Colors from "../../assets/Colors";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineMail } from "react-icons/ai";
 import { makeStyles } from "@mui/styles";
-import { signInConstant, signInStep } from "../assets/Constant";
+import { signInConstant, signInStep } from "../../assets/Constant";
 
 const useStyles = makeStyles(() => ({
   boxEffect: {
