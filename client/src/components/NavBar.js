@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Colors from "../assets/Colors";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -33,7 +34,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const NavBar = () => {
+const NavBar = ({ onSignInPress }) => {
   const style = useStyles();
 
   return (
@@ -57,7 +58,7 @@ const NavBar = () => {
             />
           </div>
           <div className={style.rightContent}>
-            <Button variant="contained" color="success">
+            <Button variant="contained" color="success" onClick={onSignInPress}>
               Sign in
             </Button>
           </div>
@@ -65,6 +66,10 @@ const NavBar = () => {
       </AppBar>
     </div>
   );
+};
+
+NavBar.propTypes = {
+  onSignInPress: PropTypes.func,
 };
 
 export default NavBar;

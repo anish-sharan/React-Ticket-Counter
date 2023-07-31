@@ -27,13 +27,13 @@ const MovieCardSection = ({
       <Slide direction="right" in={checked} mountOnEnter unmountOnExit>
         <Container>
           <Typography
-            variant="h4"
+            variant="h5"
             color={isDark ? Colors.lightTextColor : Colors.darkTextColor}
           >
             {title}
           </Typography>
           <Typography
-            variant="h5"
+            variant="h6"
             color={isDark ? Colors.lightTextColor : Colors.darkTextColor}
           >
             {subTitle}

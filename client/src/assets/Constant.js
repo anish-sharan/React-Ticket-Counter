@@ -2,6 +2,13 @@ export const dummyCarouselData = ["I am one", "I am two", "I am three"];
 
 export const dummyImage = "https://picsum.photos/200";
 
+export const signInStep = ["Select login method", "Fill details", "Success"];
+
+export const signInConstant = {
+  google: "Google",
+  email: "Email",
+};
+
 export const dummyMovie = [
   {
     image: dummyImage,
