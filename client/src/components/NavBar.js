@@ -58,7 +58,11 @@ const NavBar = ({ onSignInPress }) => {
             />
           </div>
           <div className={style.rightContent}>
-            <Button variant="contained" color="success" onClick={onSignInPress}>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: Colors.redText }}
+              onClick={onSignInPress}
+            >
               Sign in
             </Button>
           </div>
