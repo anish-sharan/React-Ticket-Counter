@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Button,
@@ -6,10 +6,11 @@ import {
   Toolbar,
   CssBaseline,
   Typography,
+  Link,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Colors from "../assets/Colors";
-import PropTypes from "prop-types";
+import SignInModal from "../components/SignIn/SignInModal";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -34,11 +35,22 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const NavBar = ({ onSignInPress }) => {
+const NavBar = () => {
   const style = useStyles();
+
+  const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
+
+  const toggleSignInVisibility = () => {
+    setIsSignInModalVisible(!isSignInModalVisible);
+  };
 
   return (
     <div className={style.root}>
+      <SignInModal
+        open={isSignInModalVisible}
+        handleClose={toggleSignInVisibility}
+      />
+
       <CssBaseline />
       <AppBar
         position="static"
@@ -46,9 +58,26 @@ const NavBar = ({ onSignInPress }) => {
       >
         <Toolbar variant="dense" className={style.toolbar}>
           <div className={style.leftContent}>
-            <Typography variant="h6" color="inherit">
-              LOGO
+            <Typography
+              variant="h6"
+              noWrap
+              component={Link}
+              to="/"
+              sx={{ textDecoration: "none" }}
+            >
+              <Link href="/" underline="none">
+                LOGO
+              </Link>
             </Typography>
+            {/* <Typography
+              variant="h6"
+              color="inherit"
+              component={Link}
+              to="/"
+              underline="none"
+            >
+              LOGO
+            </Typography> */}
             <TextField
               id="outlined-basic"
               label="Search for movies"
@@ -61,7 +90,7 @@ const NavBar = ({ onSignInPress }) => {
             <Button
               variant="contained"
               style={{ backgroundColor: Colors.redText }}
-              onClick={onSignInPress}
+              onClick={toggleSignInVisibility}
             >
               Sign in
             </Button>
@@ -70,10 +99,6 @@ const NavBar = ({ onSignInPress }) => {
       </AppBar>
     </div>
   );
-};
-
-NavBar.propTypes = {
-  onSignInPress: PropTypes.func,
 };
 
 export default NavBar;

@@ -4,6 +4,7 @@ import Colors from "../assets/Colors";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const RenderIcon = ({ children }) => {
   return <div style={styling.icon}>{children}</div>;
@@ -34,18 +35,27 @@ const Footer = () => {
               sx={{ "&:hover": { color: Colors.lightColor } }}
             />
           </RenderIcon>
+
           <RenderIcon>
             <InstagramIcon sx={{ "&:hover": { color: Colors.lightColor } }} />
           </RenderIcon>
         </div>
+
         <div>
           <RenderText text="Copyright 2023 @ Ticket Counter Pvt Ltd. All Right Reserved" />
         </div>
+
         <div style={styling.rowContainer}>
-          <RenderText text={"About us"} isHoverEffect={true} />
+          <Link to="/about_us" style={{ textDecoration: "none" }}>
+            <RenderText text={"About us"} isHoverEffect={true} />
+          </Link>
+
           <RenderText text={"\u00A0|\u00A0"} />
-          <RenderText text={"Contact us"} isHoverEffect={true} />
+          <Link to="/contact_us" style={{ textDecoration: "none" }}>
+            <RenderText text={"Contact us"} isHoverEffect={true} />
+          </Link>
         </div>
+
         <div>
           <RenderText
             text="The content and images used on this site are copyright protected and
@@ -64,7 +74,7 @@ const styling = {
   container: {
     width: "100%",
     backgroundColor: Colors.darkColor,
-    height: 200,
+    height: "40vh",
     padding: "2rem",
     paddingTop: "2rem",
   },

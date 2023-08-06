@@ -13,6 +13,9 @@ export default {
 
   // General
   white: "#fff",
+  darkRed: "#008a1e",
+  grey: "#526D82",
+  darkBackground: "#1a1a1a",
 
   // Border
   greyBorder: "#999999",

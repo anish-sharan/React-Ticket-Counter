@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import NavBar from "../components/NavBar";
+import React from "react";
 import CarouselComponent from "../components/CarouselComponent";
 import { makeStyles } from "@mui/styles";
 import MovieCardSection from "../components/MovieCardSection";
 import { TrendingSection } from "../components/TrendingSection";
-import Footer from "../components/Footer";
-import SignInModal from "../components/SignIn/SignInModal";
+import { dummyMovie } from "../assets/Constant";
 
 const useStyles = makeStyles(() => ({
   box: {
@@ -17,31 +15,25 @@ const useStyles = makeStyles(() => ({
 const HomePage = () => {
   const style = useStyles();
 
-  const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
-
-  const toggleSignInVisblity = () => {
-    setIsSignInModalVisible(!isSignInModalVisible);
-  };
-
   return (
     <>
-      <SignInModal
-        open={isSignInModalVisible}
-        handleClose={toggleSignInVisblity}
-      />
-
-      <NavBar onSignInPress={toggleSignInVisblity} />
-
       <div className={style.box}>
         <CarouselComponent />
       </div>
 
-      <MovieCardSection />
-      <MovieCardSection isDark={true} />
+      <MovieCardSection
+        movieData={dummyMovie}
+        title={"Title"}
+        subTitle={"Sub Title"}
+      />
+      <MovieCardSection
+        movieData={dummyMovie}
+        isDark={true}
+        title={"Title"}
+        subTitle={"Sub Title"}
+      />
 
       <TrendingSection />
-
-      <Footer />
     </>
   );
 };
