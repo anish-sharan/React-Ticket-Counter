@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { dummyImage, dummyMovie } from "../assets/Constant";
 import { Button, Container, Typography } from "@mui/material";
 import Colors from "../assets/Colors";
@@ -10,6 +10,7 @@ import MovieCardSection from "../components/MovieCardSection";
 
 const MovieDetailPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const selectedMovie = location?.state?.data;
 
@@ -76,7 +77,9 @@ const MovieDetailPage = () => {
           <Button
             variant="contained"
             style={{ backgroundColor: Colors.redText }}
-            onClick={() => console.log("Book tickets")}
+            onClick={() => {
+              navigate(`/theatre`, { state: { selectedMovie } });
+            }}
             sx={style.bookingButton}
           >
             Book tickets

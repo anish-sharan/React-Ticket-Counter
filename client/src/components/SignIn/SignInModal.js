@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import {
-  Modal,
-  Box,
-  //   Typography,
-  Stepper,
-  Step,
-  StepLabel,
-} from "@mui/material";
+import { Modal, Box, Stepper, Step, StepLabel } from "@mui/material";
 import Colors from "../../assets/Colors";
 import { signInConstant, signInStep } from "../../assets/Constant";
 import EmailComponent from "./EmailComponent";

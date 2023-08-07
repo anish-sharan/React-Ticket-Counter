@@ -333,3 +333,176 @@ export const dummyMovie = [
     ],
   },
 ];
+
+export const dummyTheatre = [
+  {
+    id: 1,
+    theatreName: "Inox: City Mall 36",
+    theatreAddress:
+      "3rd Floor, City Mall 36, Great Eastern Road, NH-6, Vishal Nagar, Raipur, Chhattisgarh 492001, India",
+    availableFacilities: [
+      "Food & Beverage",
+      "Wheel chair facility",
+      "Recliner",
+      "Parking",
+      "Food court",
+    ],
+    showsAvailable: [
+      {
+        fare: { silver: 100, gold: 150, platinum: 200, recliner: 250 },
+        timing: "10:00 AM",
+        language: "English",
+      },
+      {
+        fare: { silver: 100, gold: 150, platinum: 200, recliner: 250 },
+        timing: "11:10 AM",
+        language: "Hindi",
+      },
+      {
+        fare: { silver: 100, gold: 150, platinum: 200, recliner: 250 },
+        timing: "1:40",
+        language: "Hindi",
+      },
+    ],
+  },
+  {
+    id: 2,
+    theatreName: "PVR: Central Plaza",
+    theatreAddress:
+      "Central Plaza Mall, 5th Floor, Sector 53, Golf Course Road, Gurugram, Haryana 122002, India",
+    availableFacilities: [
+      "Food & Beverage",
+      "Wheel chair facility",
+      "Recliner",
+      "Parking",
+    ],
+    showsAvailable: [
+      {
+        fare: { silver: 120, gold: 180, platinum: 250, recliner: 300 },
+        timing: "9:30 AM",
+        language: "Hindi",
+      },
+      {
+        fare: { silver: 120, gold: 180, platinum: 250, recliner: 300 },
+        timing: "12:15 PM",
+        language: "Hindi",
+      },
+      {
+        fare: { silver: 120, gold: 180, platinum: 250, recliner: 300 },
+        timing: "3:00 PM",
+        language: "English",
+      },
+    ],
+  },
+  {
+    id: 3,
+    theatreName: "Cinepolis: Phoenix Marketcity",
+    theatreAddress:
+      "Phoenix Marketcity Mall, 3rd Floor, LBS Marg, Kurla West, Mumbai, Maharashtra 400070, India",
+    availableFacilities: [
+      "Food & Beverage",
+      "Wheel chair facility",
+      "Recliner",
+      "Parking",
+      "IMAX",
+    ],
+    showsAvailable: [
+      {
+        fare: { silver: 150, gold: 200, platinum: 280, recliner: 350 },
+        timing: "10:30 AM",
+        language: "English",
+      },
+      {
+        fare: { silver: 150, gold: 200, platinum: 280, recliner: 350 },
+        timing: "1:15 PM",
+        language: "English",
+      },
+      {
+        fare: { silver: 150, gold: 200, platinum: 280, recliner: 350 },
+        timing: "4:20 PM",
+        language: "English",
+      },
+    ],
+  },
+  {
+    id: 4,
+    theatreName: "AMC: Downtown Theatres",
+    theatreAddress: "123 Main Street, Suite 456, Downtown, Anytown, USA",
+    availableFacilities: ["Food & Beverage", "Wheel chair facility", "Parking"],
+    showsAvailable: [
+      {
+        fare: { regular: 10, premium: 15 },
+        timing: "11:00 AM",
+        language: "English",
+      },
+      {
+        fare: { regular: 10, premium: 15 },
+        timing: "2:30 PM",
+        language: "English",
+      },
+      {
+        fare: { regular: 10, premium: 15 },
+        timing: "6:00 PM",
+        language: "English",
+      },
+    ],
+  },
+  {
+    id: 5,
+    theatreName: "Cineplex: Downtown Plaza",
+    theatreAddress: "789 Elm Street, Downtown, Metropolis, USA",
+    availableFacilities: [
+      "Food & Beverage",
+      "Wheel chair facility",
+      "Recliner",
+      "Parking",
+    ],
+    showsAvailable: [
+      {
+        fare: { standard: 12, deluxe: 18 },
+        timing: "10:45 AM",
+        language: "Hindi",
+      },
+      {
+        fare: { standard: 12, deluxe: 18 },
+        timing: "1:20 PM",
+        language: "Hindi",
+      },
+      {
+        fare: { standard: 12, deluxe: 18 },
+        timing: "4:45 PM",
+        language: "Hindi",
+      },
+    ],
+  },
+  {
+    id: 6,
+    theatreName: "Regal Cinemas: Riverfront",
+    theatreAddress:
+      "200 Waterfront Drive, Suite 789, Riverfront Plaza, Riverside, USA",
+    availableFacilities: [
+      "Food & Beverage",
+      "Wheel chair facility",
+      "Recliner",
+      "Parking",
+      "IMAX",
+    ],
+    showsAvailable: [
+      {
+        fare: { standard: 14, premium: 20, vip: 25 },
+        timing: "9:00 AM",
+        language: "Hindi",
+      },
+      {
+        fare: { standard: 14, premium: 20, vip: 25 },
+        timing: "12:30 PM",
+        language: "Hindi",
+      },
+      {
+        fare: { standard: 14, premium: 20, vip: 25 },
+        timing: "5:15 PM",
+        language: "Hindi",
+      },
+    ],
+  },
+];
