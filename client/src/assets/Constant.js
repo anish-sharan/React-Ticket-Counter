@@ -360,7 +360,7 @@ export const dummyTheatre = [
       },
       {
         fare: { silver: 100, gold: 150, platinum: 200, recliner: 250 },
-        timing: "1:40",
+        timing: "1:40 PM",
         language: "Hindi",
       },
     ],
