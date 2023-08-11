@@ -7,6 +7,7 @@ import CustomDivider from "../components/CustomDivider";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import ShowTimeComponent from "../components/TheatreSection/ShowTimeComponent";
 import TheatreInfoModal from "../components/TheatreSection/TheatreInfoModal";
+import HeaderSection from "../components/TheatreSection/HeaderSection";
 // import PropTypes from 'prop-types'
 
 const TheatreSelectionPage = () => {
@@ -51,6 +52,7 @@ const TheatreSelectionPage = () => {
           <ShowTimeComponent
             compStyle={style.chip}
             showsData={showsAvailable}
+            selectedMovie={selectedMovie}
           />
         </div>
         <CustomDivider />
@@ -67,16 +69,9 @@ const TheatreSelectionPage = () => {
         mallName={modalData.mallName}
         mallFacilities={modalData.mallFacilities}
       />
-      <div style={style.darkBackgroundSection}>
-        <Container maxWidth={true}>
-          <Typography variant="h4" color={Colors.lightTextColor}>
-            {selectedMovie?.name}
-          </Typography>
-          <Typography variant="h6" color={Colors.lightTextColor}>
-            {selectedMovie?.duration} • {selectedMovie?.genre}
-          </Typography>
-        </Container>
-      </div>
+
+      <HeaderSection selectedMovie={selectedMovie} />
+
       <Container maxWidth={true}>
         <Card variant="outlined">
           <div>
@@ -91,15 +86,6 @@ const TheatreSelectionPage = () => {
 };
 
 const style = {
-  darkBackgroundSection: {
-    backgroundColor: Colors.darkBackground,
-    width: "100%",
-    height: "20vh",
-    display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "center",
-    marginBottom: "20px",
-  },
   mallSection: {
     display: "flex",
     flexDirection: "row",

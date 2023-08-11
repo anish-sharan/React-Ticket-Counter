@@ -506,3 +506,7 @@ export const dummyTheatre = [
     ],
   },
 ];
+
+export const dummySeatArrangement = ["A", "B", "C", "D", "E", "F", "G"];
+
+export const numberOfSeatsInRow = 20;

@@ -8,6 +8,7 @@ import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import ActorDetailPage from "../pages/ActorDetailPage";
 import TheatreSelectionPage from "../pages/TheatreSelectionPage";
+import SeatSelectionPage from "../pages/SeatSelectionPage";
 
 const Routing = () => {
   return (
@@ -20,6 +21,7 @@ const Routing = () => {
         <Route path="/about_us" element={<AboutUs />} />
         <Route path="/contact_us" element={<ContactUs />} />
         <Route path="/theatre" element={<TheatreSelectionPage />} />
+        <Route path="/seat-selection" element={<SeatSelectionPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

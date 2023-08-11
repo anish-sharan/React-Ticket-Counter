@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Colors from "../../assets/Colors";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ShowTimeComponent = ({ showsData, compStyle }) => {
   return (
@@ -9,7 +10,9 @@ const ShowTimeComponent = ({ showsData, compStyle }) => {
       {showsData?.map((eachShow, i) => {
         return (
           <div key={i} style={style.chip}>
-            <Typography>{eachShow?.timing}</Typography>
+            <Link to="/seat-selection" style={{ textDecoration: "none" }}>
+              <Typography color={Colors.redText}>{eachShow?.timing}</Typography>
+            </Link>
           </div>
         );
       })}
