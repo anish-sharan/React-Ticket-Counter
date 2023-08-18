@@ -1,13 +1,13 @@
 import { Card, Container, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import Colors from "../assets/Colors";
-import { dummyTheatre } from "../assets/Constant";
-import CustomDivider from "../components/CustomDivider";
+import Colors from "../../assets/Colors";
+import { dummyTheatre } from "../../assets/Constant";
+import CustomDivider from "../../components/CustomDivider";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import ShowTimeComponent from "../components/TheatreSection/ShowTimeComponent";
-import TheatreInfoModal from "../components/TheatreSection/TheatreInfoModal";
-import HeaderSection from "../components/TheatreSection/HeaderSection";
+import ShowTimeComponent from "../../components/TheatreSection/ShowTimeComponent";
+import TheatreInfoModal from "../../components/TheatreSection/TheatreInfoModal";
+import HeaderSection from "../../components/TheatreSection/HeaderSection";
 // import PropTypes from 'prop-types'
 
 const TheatreSelectionPage = () => {

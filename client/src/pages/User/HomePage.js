@@ -1,9 +1,9 @@
 import React from "react";
-import CarouselComponent from "../components/CarouselComponent";
+import CarouselComponent from "../../components/CarouselComponent";
 import { makeStyles } from "@mui/styles";
-import MovieCardSection from "../components/MovieCardSection";
-import { TrendingSection } from "../components/TrendingSection";
-import { dummyMovie } from "../assets/Constant";
+import MovieCardSection from "../../components/MovieCardSection";
+import { TrendingSection } from "../../components/TrendingSection";
+import { dummyMovie } from "../../assets/Constant";
 
 const useStyles = makeStyles(() => ({
   box: {

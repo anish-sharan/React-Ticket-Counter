@@ -1,8 +1,8 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import PropTypes from "prop-types";
-import { dummyImage2 } from "../../../../assets/Constant";
-import Colors from "../../../../assets/Colors";
+import { dummyImage2 } from "../../../assets/Constant";
+import Colors from "../../../assets/Colors";
 import { Link } from "react-router-dom";
 
 const ActorImageSection = ({ actors = [], containerStyle }) => {

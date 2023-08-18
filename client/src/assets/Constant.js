@@ -9,6 +9,7 @@ export const signInStep = ["Select login method", "Fill details", "Success"];
 export const signInConstant = {
   google: "Google",
   email: "Email",
+  admin: "Admin",
 };
 
 export const dummyMovie = [

@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineMail } from "react-icons/ai";
+import { FaUser } from "react-icons/fa";
 import { Typography } from "@mui/material";
 import Colors from "../../assets/Colors";
 import { makeStyles } from "@mui/styles";
+import { signInConstant } from "../../assets/Constant";
 
 const useStyles = makeStyles(() => ({
   boxEffect: {
@@ -14,13 +16,22 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const RenderBox = ({ isGoogle, loginMethod, onClick }) => {
+const renderIcon = (iconToRender) => {
+  switch (iconToRender) {
+    case signInConstant.google:
+      return <FcGoogle />;
+    case signInConstant.email:
+      return <AiOutlineMail />;
+    case signInConstant.admin:
+      return <FaUser />;
+  }
+};
+
+const RenderBox = ({ icon, loginMethod, onClick }) => {
   const classes = useStyles();
   return (
     <div style={styles.box} className={classes.boxEffect} onClick={onClick}>
-      <div style={styles.iconSection}>
-        {isGoogle ? <FcGoogle /> : <AiOutlineMail />}
-      </div>
+      <div style={styles.iconSection}>{renderIcon(icon)}</div>
       <div style={styles.textSection}>
         <Typography>{loginMethod}</Typography>
       </div>
@@ -50,8 +61,8 @@ const styles = {
 };
 
 RenderBox.propTypes = {
-  isGoogle: PropTypes.bol,
   loginMethod: PropTypes.string,
+  icon: PropTypes.string,
   onClick: PropTypes.func,
 };
 

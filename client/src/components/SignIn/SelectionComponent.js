@@ -10,18 +10,25 @@ const SelectionComponent = ({ setSignInMethod, setSteps }) => {
     <>
       <div style={styles.mt}>
         <RenderBox
-          icon={"google"}
-          isGoogle={true}
+          icon={signInConstant.google}
           loginMethod={"Continue with Google"}
           onClick={() => {
             setSignInMethod(signInConstant.google);
           }}
         />
         <RenderBox
-          icon={"Email"}
+          icon={signInConstant.email}
           loginMethod={"Continue with Email"}
           onClick={() => {
             setSignInMethod(signInConstant.email);
+            setSteps(2);
+          }}
+        />
+        <RenderBox
+          icon={signInConstant.admin}
+          loginMethod={"Continue as Admin"}
+          onClick={() => {
+            setSignInMethod(signInConstant.admin);
             setSteps(2);
           }}
         />

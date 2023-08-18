@@ -1,12 +1,13 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { dummyImage, dummyMovie } from "../assets/Constant";
-import { Button, Container, Typography } from "@mui/material";
-import Colors from "../assets/Colors";
+import { dummyImage, dummyMovie } from "../../assets/Constant";
+import { Container, Typography } from "@mui/material";
+import Colors from "../../assets/Colors";
 import { FaRegThumbsUp } from "react-icons/fa";
-import ActorImageSection from "../components/MovieDetails/ActorImageSection";
-import CustomDivider from "../components/CustomDivider";
-import MovieCardSection from "../components/MovieCardSection";
+import ActorImageSection from "../../components/TheatreSection/MovieDetails/ActorImageSection";
+import CustomDivider from "../../components/CustomDivider";
+import MovieCardSection from "../../components/MovieCardSection";
+import CustomButton from "../../components/CustomButton";
 
 const MovieDetailPage = () => {
   const location = useLocation();
@@ -74,16 +75,13 @@ const MovieDetailPage = () => {
             {selectedMovie?.rating}
           </Typography>
 
-          <Button
-            variant="contained"
-            style={{ backgroundColor: Colors.redText }}
+          <CustomButton
+            style={{ backgroundColor: Colors.redText, marginTop: "10px" }}
             onClick={() => {
               navigate(`/theatre`, { state: { selectedMovie } });
             }}
-            sx={style.bookingButton}
-          >
-            Book tickets
-          </Button>
+            title={"Book tickets"}
+          />
         </div>
       </div>
 

@@ -11,21 +11,24 @@ const SignInModal = ({ open, handleClose }) => {
   const [steps, setSteps] = useState(1);
 
   const signInTypeComponent = () => {
-    switch (signInMethod) {
-      case signInConstant.email:
-        return (
-          <EmailComponent
-            setSignInMethod={setSignInMethod}
-            setSteps={setSteps}
-          />
-        );
-      default:
-        return (
-          <SelectionComponent
-            setSignInMethod={setSignInMethod}
-            setSteps={setSteps}
-          />
-        );
+    if (
+      signInMethod == signInConstant.email ||
+      signInMethod == signInConstant.admin
+    ) {
+      return (
+        <EmailComponent
+          setSignInMethod={setSignInMethod}
+          setSteps={setSteps}
+          isAdminLogin={signInMethod == signInConstant.admin}
+        />
+      );
+    } else {
+      return (
+        <SelectionComponent
+          setSignInMethod={setSignInMethod}
+          setSteps={setSteps}
+        />
+      );
     }
   };
 
@@ -58,7 +61,7 @@ const styles = {
     bgcolor: Colors.white,
     boxShadow: 24,
     p: 4,
-    height: "50%",
+    height: "60%",
     borderRadius: "5px",
   },
 };

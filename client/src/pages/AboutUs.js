@@ -58,6 +58,7 @@ const style = {
     flexDirection: "column",
     textAlign: "center",
     marginBottom: "20px",
+    height: "15rem",
   },
   marginTopBottom: {
     marginTop: "20px",

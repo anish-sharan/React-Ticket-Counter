@@ -1,7 +1,9 @@
 import React from "react";
 import BlurImageSection from "../components/BlurImageSection";
-import { Button, Container, TextField, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Colors from "../assets/Colors";
+import CustomInput from "../components/CustomInput";
+import CustomButton from "../components/CustomButton";
 // import PropTypes from "prop-types";
 
 const ContactUs = () => {
@@ -27,33 +29,21 @@ const ContactUs = () => {
       </BlurImageSection>
 
       <Container style={style.inputSection}>
-        <TextField
-          id="outlined-basic"
-          label="Please enter your name"
-          variant="outlined"
-        />
-        <TextField
-          id="outlined-basic"
+        <CustomInput label="Please enter your name" />
+        <CustomInput
           label="Please enter your email"
-          variant="outlined"
-          sx={style.marginTopBottom}
+          style={style.marginTopBottom}
         />
-        <TextField
-          id="outlined-basic"
+        <CustomInput
           label="Message"
-          variant="outlined"
           maxRows={5}
           minRows={5}
           multiline
-          sx={{ marginBottom: "20px" }}
+          style={{ marginBottom: "20px" }}
         />
         <div style={style.buttonSection}>
-          <Button variant="outlined" color="info">
-            Reset
-          </Button>
-          <Button variant="contained" color="success">
-            Submit
-          </Button>
+          <CustomButton color="info" variant="outlined" title={"Reset"} />
+          <CustomButton color="success" title={"Submit"} />
         </div>
       </Container>
     </div>

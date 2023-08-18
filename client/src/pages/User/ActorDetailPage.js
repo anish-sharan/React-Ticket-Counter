@@ -1,11 +1,11 @@
 import React from "react";
-import Colors from "../assets/Colors";
-import { dummyImage2, dummyMovie } from "../assets/Constant";
+import Colors from "../../assets/Colors";
+import { dummyImage2, dummyMovie } from "../../assets/Constant";
 import { Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import { Container } from "@mui/system";
-import CustomDivider from "../components/CustomDivider";
-import MovieCardSection from "../components/MovieCardSection";
+import CustomDivider from "../../components/CustomDivider";
+import MovieCardSection from "../../components/MovieCardSection";
 
 // import PropTypes from 'prop-types'
 

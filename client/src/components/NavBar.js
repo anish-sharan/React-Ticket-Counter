@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Button,
-  TextField,
-  Toolbar,
-  CssBaseline,
-  Typography,
-  Link,
-} from "@mui/material";
+import { AppBar, Toolbar, CssBaseline, Typography, Link } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Colors from "../assets/Colors";
 import SignInModal from "../components/SignIn/SignInModal";
+import CustomInput from "./CustomInput";
+import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -29,9 +23,6 @@ const useStyles = makeStyles(() => ({
   rightContent: {
     display: "flex",
     alignItems: "center",
-  },
-  textField: {
-    backgroundColor: Colors.white,
   },
 }));
 
@@ -69,31 +60,19 @@ const NavBar = () => {
                 LOGO
               </Link>
             </Typography>
-            {/* <Typography
-              variant="h6"
-              color="inherit"
-              component={Link}
-              to="/"
-              underline="none"
-            >
-              LOGO
-            </Typography> */}
-            <TextField
-              id="outlined-basic"
+
+            <CustomInput
               label="Search for movies"
-              variant="outlined"
               size="small"
-              className={style.textField}
+              style={{ backgroundColor: Colors.white }}
             />
           </div>
           <div className={style.rightContent}>
-            <Button
-              variant="contained"
+            <CustomButton
               style={{ backgroundColor: Colors.redText }}
               onClick={toggleSignInVisibility}
-            >
-              Sign in
-            </Button>
+              title={"Sign in"}
+            />
           </div>
         </Toolbar>
       </AppBar>

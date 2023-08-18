@@ -1,10 +1,14 @@
 import React from "react";
-import HeaderSection from "../components/TheatreSection/HeaderSection";
+import HeaderSection from "../../components/TheatreSection/HeaderSection";
 // import CustomDivider from "../components/CustomDivider";
-import { Button, Container, Typography } from "@mui/material";
-import { dummySeatArrangement, numberOfSeatsInRow } from "../assets/Constant";
-import SeatArrangement from "../components/TheatreSection/SeatArrangement";
-import Colors from "../assets/Colors";
+import { Container, Typography } from "@mui/material";
+import {
+  dummySeatArrangement,
+  numberOfSeatsInRow,
+} from "../../assets/Constant";
+import SeatArrangement from "../../components/TheatreSection/SeatArrangement";
+import Colors from "../../assets/Colors";
+import CustomButton from "../../components/CustomButton";
 // import PropTypes from 'prop-types'
 
 const SeatSelectionPage = () => {
@@ -41,9 +45,7 @@ const SeatSelectionPage = () => {
           {renderBox(true)} <Typography>Filled</Typography>
         </Container>
         <div style={style.buttonSection}>
-          <Button variant="contained" style={style.button}>
-            Pay Rs.100.00
-          </Button>
+          <CustomButton style={style.button} title={"Pay Rs.100.00"} />
         </div>
       </Container>
     </>
