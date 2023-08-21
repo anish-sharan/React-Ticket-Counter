@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Colors from "../../assets/Colors";
 import CustomButton from "../CustomButton";
 
-const TextSection = ({ boldText, smallText }) => {
+const TextSection = ({ boldText, smallText, onClick }) => {
   return (
     <Container>
       <div style={style.container}>
@@ -12,7 +12,11 @@ const TextSection = ({ boldText, smallText }) => {
           {boldText}
         </Typography>
         <Typography color={Colors.darkTextColor}>{smallText}</Typography>
-        <CustomButton style={style.button} title={"Add your Movie"} />
+        <CustomButton
+          style={style.button}
+          title={"Add your Movie"}
+          onClick={onClick}
+        />
       </div>
       ;
     </Container>
@@ -38,6 +42,7 @@ const style = {
 TextSection.propTypes = {
   boldText: PropTypes.string,
   smallText: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default TextSection;

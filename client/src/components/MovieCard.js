@@ -12,7 +12,7 @@ const MovieCard = ({
   isFullImageCard,
 }) => {
   return (
-    <Card raised={true} sx={[style, { maxWidth: 400, minHeight: 300 }]}>
+    <Card raised={true} sx={{ ...style, width: "100%", minHeight: 300 }}>
       <CardMedia
         component="img"
         image={image}

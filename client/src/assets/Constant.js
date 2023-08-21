@@ -12,6 +12,19 @@ export const signInConstant = {
   admin: "Admin",
 };
 
+export const movieFromApiDummy = [
+  { value: "The Adventure Begins", label: "The Adventure Begins" },
+  { value: "Comedy of Errors", label: "Comedy of Errors" },
+];
+
+export const showTime = [
+  { value: "8:00 AM", label: "8:00 AM" },
+  { value: "9:00 AM", label: "9:00 AM" },
+  { value: "10:00 AM", label: "10:00 AM" },
+  { value: "1:00 PM", label: "1:00 PM" },
+  { value: "2:00 PM", label: "2:00 PM" },
+];
+
 export const dummyMovie = [
   {
     id: 1,
