@@ -1,14 +1,10 @@
-import React from "react";
-import {
-  AppBar,
-  Button,
-  TextField,
-  Toolbar,
-  CssBaseline,
-  Typography,
-} from "@mui/material";
+import React, { useState } from "react";
+import { AppBar, Toolbar, CssBaseline, Typography, Link } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Colors from "../assets/Colors";
+import SignInModal from "../components/SignIn/SignInModal";
+import CustomInput from "./CustomInput";
+import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -28,16 +24,24 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     alignItems: "center",
   },
-  textField: {
-    backgroundColor: Colors.white,
-  },
 }));
 
 const NavBar = () => {
   const style = useStyles();
 
+  const [isSignInModalVisible, setIsSignInModalVisible] = useState(false);
+
+  const toggleSignInVisibility = () => {
+    setIsSignInModalVisible(!isSignInModalVisible);
+  };
+
   return (
     <div className={style.root}>
+      <SignInModal
+        open={isSignInModalVisible}
+        handleClose={toggleSignInVisibility}
+      />
+
       <CssBaseline />
       <AppBar
         position="static"
@@ -45,21 +49,30 @@ const NavBar = () => {
       >
         <Toolbar variant="dense" className={style.toolbar}>
           <div className={style.leftContent}>
-            <Typography variant="h6" color="inherit">
-              LOGO
+            <Typography
+              variant="h6"
+              noWrap
+              component={Link}
+              to="/"
+              sx={{ textDecoration: "none" }}
+            >
+              <Link href="/" underline="none">
+                LOGO
+              </Link>
             </Typography>
-            <TextField
-              id="outlined-basic"
+
+            <CustomInput
               label="Search for movies"
-              variant="outlined"
               size="small"
-              className={style.textField}
+              style={{ backgroundColor: Colors.white }}
             />
           </div>
           <div className={style.rightContent}>
-            <Button variant="contained" color="success">
-              Sign in
-            </Button>
+            <CustomButton
+              style={{ backgroundColor: Colors.redText }}
+              onClick={toggleSignInVisibility}
+              title={"Sign in"}
+            />
           </div>
         </Toolbar>
       </AppBar>

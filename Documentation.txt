@@ -1,0 +1,21 @@
+User Roles:
+
+Consumer: Users will be able to browse movies, view showtimes, select seats, and book tickets.
+Theater Admin: Theater owners or administrators will have access to manage movies, showtimes, and seating arrangements.
+
+Theater Admin Dashboard:
+
+Theater admins will have access to a dedicated dashboard for managing movies, showtimes, and seating arrangements.
+They can add new movies, update movie details, set showtimes, and define seating layouts for different theater halls.
+The admin dashboard will provide insights into ticket sales, occupancy rates, and other relevant analytics.
+
+Movie Listings and Showtimes:
+
+The website will display a list of movies currently playing or upcoming.
+Users can view movie details, including synopsis, duration, genre, cast, and reviews.
+Showtimes for each movie will be listed, and users can select a showtime to proceed with the booking process.
+Seat Selection and Booking:
+
+Users will be able to select their preferred seats from a seating layout displayed for each showtime.
+The system will handle seat availability, seat blocking during the booking process, and updating the seating layout accordingly.
+Once seats are selected, users can proceed to the payment gateway for ticket confirmation and purchase.
